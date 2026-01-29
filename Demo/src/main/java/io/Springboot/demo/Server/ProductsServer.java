@@ -23,4 +23,25 @@ public class ProductsServer {
     public void addProduct(Products prod){
         product.add(prod);
     }
+    public void changeProd(Products prod) {
+       //for loop
+       int index = 0;
+       for(int i =0; i<product.size(); i++)
+       {
+            if (product.get(i).getProdId() == prod.getProdId()){
+                index = i;
+            }
+       }
+       product.set(index, prod);
+    }
+    public void delProduct(int prodId) {
+        int index = 0;
+       for(int i =0; i<product.size(); i++)
+       {
+            if (product.get(i).getProdId() == prodId){
+                index = i;
+            }
+       }
+       product.remove(index);
+    }
 }
