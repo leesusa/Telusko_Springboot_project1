@@ -1,9 +1,13 @@
-package io.Springboot.demo;
+package io.Springboot.demo.Model;
 
 import org.springframework.stereotype.Component;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
 @Component
+@Entity
 public class Products {
+    @Id
     private int prodId;
     private String prodName;
     private int prodPrice;
